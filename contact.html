@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Smart Coop</title>
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/globals.css" />
+    <link rel="stylesheet" href="./assets/css/styleguide.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Favicon (Desktop) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/Smart Coop (4).svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/Smart Coop (4).svg"
+      type="image/x-icon"
+    />
+
+    <!-- Apple Touch Icon (iOS Home Screen) -->
+    <link rel="apple-touch-icon" href="./assets/images/Smart Coop (4).svg" />
+
+    <!-- Android/Progressive Web App Icon -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#007bff" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="nav-bar slide-in">
+          <div class="logo slide-in">
+            <img
+              src="./assets/images/Smart Coop (1) (1).svg"
+              alt="Smart Coop Logo"
+            />
+          </div>
+          <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <ul id="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Service</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./signup.html" class="cta-btn">Sign Up</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero-sect slide-in">
+        <h1 class="text-wrapper-20 slide-in">Services</h1>
+        <p class="text-wrapper-19 slide-in">
+          We’d love to hear from you! Whether you’re a farmer interested in
+          automating your coop, a partner looking to collaborate, or someone
+          curious about our technology, Smart Coop is here to connect.
+        </p>
+      </section>
+    </div>
+    <div class="stats-section slide-in">
+      <div class="stat">
+        <h2>8+</h2>
+        <p>Projects</p>
+      </div>
+      <div class="stat">
+        <h2>10+</h2>
+        <p>Teams</p>
+      </div>
+      <div class="stat">
+        <h2>20+</h2>
+        <p>Clients</p>
+      </div>
+      <div class="stat">
+        <h2>15+</h2>
+        <p>Users</p>
+      </div>
+    </div>
+    <section class="contact-section slide-in">
+      <h2>Instructions</h2>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-container">
+          <!-- Left side -->
+          <div class="form-fields">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="topic">Topic:</label>
+              <input type="text" id="topic" name="topic" required />
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Right side -->
+          <div class="map-container">
+            <div class="map-placeholder" aria-label="Location map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.4803988682427!2d-10.796099!3d6.310556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf09f9f388ef76eb%3A0x8cfe3b54b4980b1b!2sOrange%20Digital%20Center%20(ODC)!5e0!3m2!1sen!2slr!4v1726678000000!5m2!1sen!2slr"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 15px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">SEND</button>
+      </form>
+    </section>
+    <footer class="footer slide-in">
+      <div class="footer-container">
+        <!-- Information -->
+        <div class="footer-section">
+          <h3>INFORMATION</h3>
+          <p>
+         Revolutionizing chicken farming with intelligent automation.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-section">
+          <h3>NAVIGATION</h3>
+          <ul>
+            <li><a href="./index.html">> Homepage</a></li>
+            <li><a href="./about.html">> About Us</a></li>
+            <li><a href="./services.html">> Services</a></li>
+            <li><a href="./contact.html">> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h3>CONTACT US</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Lumbung Hidup East Java</p>
+          <p><i class="fas fa-envelope"></i> Hello@Homco.com</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Email Address" required />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>ALLRIGHT RESERVED - SMART COOP</p>
+        <div class="footer-links">
+          <a href="#">DISCLAIMER</a>
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">TERM OF USE</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./assets/js/main.js"></script>
+</html>
