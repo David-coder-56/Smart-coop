@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Smart Coop</title>
+  <link rel="stylesheet" href="./assets/css/auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon (Desktop) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/Smart Coop (4).svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/Smart Coop (4).svg"
+      type="image/x-icon"
+    />
+
+    <!-- Apple Touch Icon (iOS Home Screen) -->
+    <link rel="apple-touch-icon" href="./assets/images/Smart Coop (4).svg" />
+
+    <!-- Android/Progressive Web App Icon -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#007bff" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card slide-in">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p class="switch"><a href="forgot.html">Forgot Password?</a></p>
+      <p class="switch">Don’t have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+  </div>
+  <script src="./assets/js/auth.js"></script>
+</body>
+</html>
