@@ -36,13 +36,13 @@
   }
 }
 body {
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   word-spacing: 1.6;
   color: white;
 }
 .wrapper {
   padding-top: 20px;
-  min-height: 100vh;
+  min-height: 83vh;
   background-image: linear-gradient(#007bff81, #007bff8a),
     url("../images/chicken-farm-scene-with-poultry-people\ \(1\).jpg"); /* go up, then into images */
   background-size: cover;
