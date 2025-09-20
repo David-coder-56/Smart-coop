@@ -1,35 +1,45 @@
+// frontend/assets/js/signup.js
 document.addEventListener("DOMContentLoaded", () => {
   const signupForm = document.getElementById("signupForm");
 
-  if (signupForm) {
-    signupForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
+  if (!signupForm) return;
 
-      const username = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+  signupForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-      try {
-        const res = await fetch("http://localhost:5000/api/auth/register", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username, email, password }),
-        });
+    const name = document.getElementById("name").value.trim();   // NOTE: 'name' to match backend
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
 
-        const data = await res.json();
-        console.log(data);
+    if (!name || !email || !password) {
+      alert("Please fill in all fields.");
+      return;
+    }
 
-        if (res.ok) {
-          alert("✅ Registered! Redirecting...");
-          localStorage.setItem("token", data.token);
-          window.location.href = "/dashboard.html";
-        } else {
-          alert(data.msg);
-        }
-      } catch (err) {
-        console.error("Error:", err);
-        alert("⚠️ Server error.");
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",              // important so cookie (token) is saved
+        body: JSON.stringify({ name, email, password }),
+      });
+
+
+      const data = await res.json();
+
+      if (res.ok) {
+        // Registration OK
+        alert("✅ Registered! Redirecting...");
+        // token may be sent in cookie (httpOnly) — optionally keep in localStorage if backend returns token
+        if (data.token) localStorage.setItem("token", data.token);
+        window.location.href = "/dashboard.html";
+      } else {
+        // show readable server error
+        alert("❌ " + (data.msg || "Registration failed"));
       }
-    });
-  }
+    } catch (err) {
+      console.error("Network/error:", err);
+      alert("⚠️ Could not connect to server. Is the backend running?");
+    }
+  });
 });
