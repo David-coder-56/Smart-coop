@@ -776,12 +776,17 @@ h2.about-us {
     left: auto;
     margin-top: 20px;
   } /* stack elements vertically */
+  .logo img {
+    width: 70px;
+    height: auto;
+  }
   #nav-links {
     position: absolute;
-    top: 70px;
-    right: 0;
+    top: -20px;
+    left: 250px;
+    /* right: 0; */
     background: var(--main-color);
-    width: 100%;
+    width: 50%;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
@@ -808,6 +813,32 @@ h2.about-us {
   /* Hamburger visible */
   .menu-toggle {
     display: block;
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+   
   }
   .second-sect .container {
     flex-direction: column;
